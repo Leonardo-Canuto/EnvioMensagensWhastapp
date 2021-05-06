@@ -1,20 +1,21 @@
 import pandas as pd
 
 # É necessario ter uma planila de excel com as seguintes nomes de colunas (Pessoa, Número, Mensagem)
+
 # Importando a planilha
 
 contatos_df = pd.read_excel("Enviar.xlsx")
 
-# Importando pacotes necessários para o contatos_df
+# Importando pacotes necessários para o o cod funcionar
 # Será necessario instalar o Selenium via pip
-# Outro ponto importante é Baixar o executavel do ChromeDrive ( para quem usa Chrome de navegador)
+# Outro ponto importante é Baixar o executavel do ChromeDrive e salvar o arquivo no mesmo local de instação do Python ( para quem usa Chrome de navegador).
 
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 import time
 import urllib
 
-
+# Para Logar no Whatsapp
 navegador = webdriver.Chrome()
 navegador.get("https://web.whatsapp.com/")
 
